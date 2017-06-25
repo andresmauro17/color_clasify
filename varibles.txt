@@ -1,0 +1,111 @@
+brightness
+contrast
+exposure
+focus
+gain
+pan
+saturation
+sharpness
+Tilt
+white_balance
+zoom
+
+
+
+
+
+
+src.Brightness = brightness;
+src.Contrast = contrast;
+src.Exposure = exposure;
+src.Focus = focus;
+src.Gain = gain;
+src.Pan = pan;
+src.Saturation = saturation;
+src.Sharpness = sharpness;
+src.Tilt = Tilt;
+src.WhiteBalance = white_balance;
+src.Zoom = zoom;
+
+
+src.BacklightCompensation = 'off';
+src.ExposureMode = 'manual';
+src.FocusMode = 'manual';
+src.HorizontalFlip = 'on';
+src.WhiteBalanceMode = 'auto';
+
+
+global vid
+src = getselectedsource(vid);
+
+
+
+
+
+
+
+
+
+
+
+backlight_on
+backlight_off
+
+exposure_auto
+exposure_manual
+
+focus_auto
+focus_manual
+
+horizontal_flip_on
+horizontal_flip_off
+
+vertical_flip_on
+vertical_flip_off
+
+white_balance_auto
+white_balance_manual
+
+
+edit_brightness
+edit_contrast
+edit_exposure
+edit_focus
+edit_gain
+edit_pan
+edit_saturation
+edit_sharpness
+edit_Tilt
+edit_white_balance
+edit_zoom
+
+slider_brightness
+slider_contrast
+slider_exposure
+slider_focus
+slider_gain
+slider_pan
+slider_saturation
+slider_sharpness
+slider_Tilt
+slider_white_balance
+slider_zoom
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

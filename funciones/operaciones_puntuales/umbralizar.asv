@@ -1,0 +1,29 @@
+%% FCN_UMBRALIZAR binarizacion de una imagen
+% imagen_binaria=fcn_umbralizar(imagen,umbral,tol);
+% descripcion: esta funcion devuelve una imagen binaria, dendiendo del val
+% para ejecutarla es nesesario ingresar la imagen y el parametro de la
+% cantidad de brillo a modificar, esta funcion realiza un desplazamiento al
+% histograma.
+% ejemplo:
+% imagen=imread('GRIM.BMP');
+% imagen_brillo=fcn_brillo(imagen,20);
+% _________________________________________________________________________
+
+
+
+%%
+
+
+function [imagen_binaria]=fcn_umbralizar(imagen,umbral,tol);
+
+[filas,columna]=size(imagen);
+
+imagen_binaria=zeros(filas,columna);
+
+for i=1:filas% recorre filas
+    for j=1:columna %recorre columnas       
+        if (imagen(i,j)>=umbral-tol) && (imagen(i,j)<=umbral+tol)%si el pixel esta en el rango             
+           imagen_binaria(i,j)=255;%el pixel sera 255        
+        end   
+    end   
+end

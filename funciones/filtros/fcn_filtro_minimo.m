@@ -1,0 +1,29 @@
+%% [imagen_f_minimo]=fcn_filtro_minimo(imagen);
+% ********************funcion filtro_minimo********************************
+
+% Andres cuervo (2117746)
+
+%% *************************************************************************_
+function[imagen_f_minimo]=fcn_filtro_minimo(imagen);
+
+
+x=double(imagen);
+[fil,col]=size(x);
+
+% ____________________________filtro minimo_____________________________
+
+imagen_f_minimo=zeros(fil,col);
+tam=3;%tamano de la ventana del vecindario
+
+for i=(tam+1)/2:1+fil-(tam+1)/2;% 3+1/2=2, empieza en dos que es el punto central
+    
+ for j=(tam+1)/2:1+col-(tam+1)/2;
+     
+      temp=x(i-((tam-1)/2):i+((tam-1)/2),j-((tam-1)/2):j+((tam-1)/2));%mascara temporal que hace recorrido
+      
+      imagen_f_minimo(i,j)=min(min(temp));%asigno el minimo en centro de la vecindad
+      
+        
+ end
+ 
+end 
